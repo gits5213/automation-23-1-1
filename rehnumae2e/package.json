@@ -1,0 +1,21 @@
+{
+  "name": "rehnumae2e",
+  "version": "1.0.0",
+  "description": "e2e tests",
+  "scripts": {
+    "test": "npx cypress open",
+    "headless": "cypress run --headless"
+    
+  },
+  "keywords": [
+    "cypressio",
+    "allureReport",
+    "Github",
+    "GithubAction"
+  ],
+  "author": "rehnuma",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.17.1"
+  }
+}
