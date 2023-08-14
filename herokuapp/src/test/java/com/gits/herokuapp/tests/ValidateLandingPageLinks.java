@@ -13,7 +13,7 @@ public class ValidateLandingPageLinks {
 
     String expectedUrl = "https://the-internet.herokuapp.com/abtest";
 
-    @Test
+    @Test(priority = 0)
     public void validateLandingPageLinks() throws InterruptedException {
 
         /*
@@ -45,13 +45,23 @@ public class ValidateLandingPageLinks {
         int linkCount = linkElements.size();
         Assert.assertEquals(linkCount, 46, "No links found on the webpage.");
 
-
-
-
-
-        Thread.sleep(4000);
+        Thread.sleep(1000);
         driver.quit();
 
 
+    }
+
+    @Test(priority = 1)
+    public void validateLogInBtn() throws InterruptedException {
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.aa.com/homePage.do");
+        Thread.sleep(1000);
+
+        WebElement LogInLink = driver.findElement(By.cssSelector("a#log-in-button"));
+        LogInLink.click();
+
+
+        Thread.sleep(1000);
+        driver.quit();
     }
 }
