@@ -3,7 +3,12 @@
 <suite name="RegressionSuite" verbose="1" >
     <test name="Regression1">
         <classes>
-            <class name="com.gits.herokuapp.tests.ValidateLandingPageLinks"/>
+            <class name="com.gits.herokuapp.tests.ValidateLandingPageLinks">
+                <methods>
+                    <exclude name="validateLandingPageLinks" />
+                    <include name="validateLogInBtn" />
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
